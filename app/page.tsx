@@ -1,12 +1,22 @@
 function Arrow() {
-  return <span aria-hidden="true">↗</span>;
+  return <span aria-hidden="true">→</span>;
+}
+
+function BrandLogo() {
+  return (
+    <span className="brandLogo" aria-label="The Boring Product">
+      <span className="brandThe">THE</span>
+      <span className="brandBoring">BORING</span>
+      <span className="brandBottom"><span className="brandLines" aria-hidden="true" /><span className="brandProduct">PRODUCT</span></span>
+    </span>
+  );
 }
 
 export default function Home() {
   return (
     <main>
-      <header className="nav shell">
-        <a className="brand" href="#top">The Boring Product</a>
+      <header className="nav shell newNav">
+        <a className="brand brandMark" href="#top"><BrandLogo /></a>
         <nav className="navLinks" aria-label="Primary navigation">
           <div className="navDropdown">
             <a className="navDropdownTrigger" href="/products">Products <span aria-hidden="true">⌄</span></a>
@@ -18,31 +28,31 @@ export default function Home() {
           <a href="#technology">Technology</a>
           <a href="#about">About</a>
         </nav>
-        <a className="ghostButton" href="/products">Explore products <Arrow /></a>
+        <a className="ghostButton heroNavButton" href="/products">Explore Products</a>
       </header>
 
-      <section className="hero shell" id="top">
-        <div className="heroCopy">
-          <p className="eyebrow">PRODUCTS / SYSTEMS / INTELLIGENCE</p>
-          <h1>We build boring products for a world that is anything but.</h1>
-          <p className="lede">A technology product company building practical digital products and devices people actually use.</p>
+      <section className="hero shell heroRefresh" id="top">
+        <div className="heroCopy heroCopyRefresh">
+          <h1>We build products<br />that solve real problems.</h1>
+          <p className="lede">The Boring Product builds digital products and devices that make life simpler, businesses smarter, and the future more connected.</p>
           <div className="heroActions">
-            <a className="primaryButton" href="/products">Explore our products <Arrow /></a>
-            <a className="textLink" href="#about">Why boring? <span>→</span></a>
+            <a className="primaryButton primaryButtonRefresh" href="/products">Explore Products <Arrow /></a>
           </div>
         </div>
 
-        <div className="quantumScene" aria-hidden="true">
-          <div className="orbit orbitOne" />
-          <div className="orbit orbitTwo" />
-          <div className="orbit orbitThree" />
-          <div className="core"><div className="coreInner" /></div>
-          <span className="particle p1" />
-          <span className="particle p2" />
-          <span className="particle p3" />
-          <span className="particle p4" />
-          <span className="particle p5" />
+        <div className="portalScene" aria-hidden="true">
+          <div className="portalGlow" />
+          <div className="portalRing" />
+          <div className="portalBase"><div className="portalBaseInner" /></div>
+          <div className="portalFloor" />
         </div>
+      </section>
+
+      <section className="valueStrip shell" aria-label="What we value">
+        <article><span className="valueIcon">◌</span><div><h3>Innovative by Design</h3><p>We create products that combine simplicity, usability, and intelligence.</p></div></article>
+        <article><span className="valueIcon">◇</span><div><h3>Secure &amp; Reliable</h3><p>Security and reliability are built in from day one.</p></div></article>
+        <article><span className="valueIcon">↗</span><div><h3>Built for Impact</h3><p>Everything we build is designed to make a meaningful difference.</p></div></article>
+        <article><span className="valueIcon">◎</span><div><h3>Focused on You</h3><p>We build for real people and real businesses with real needs.</p></div></article>
       </section>
 
       <section className="statement shell" id="technology">
@@ -73,7 +83,7 @@ export default function Home() {
 
       <footer className="footer shell" id="contact">
         <div>
-          <a className="brand" href="#top">The Boring Product</a>
+          <a className="brand brandMark footerBrand" href="#top"><BrandLogo /></a>
           <p>We build boring products that solve real problems.</p>
           <div className="footerContact">
             <a href="mailto:info@theboringproduct.com">info@theboringproduct.com</a>
