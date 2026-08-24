@@ -1,3 +1,18 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Products",
+  description: "Explore live digital products and shipped devices from The Boring Product.",
+  alternates: {
+    canonical: "/products",
+  },
+  openGraph: {
+    url: "https://theboringproduct.com/products",
+    title: "Products | The Boring Product",
+    description: "Explore live digital products and shipped devices from The Boring Product.",
+  },
+};
+
 const digitalProducts = [
   {
     name: "ExpenseMargin",
