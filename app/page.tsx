@@ -4,36 +4,16 @@ const products = [
     status: "LIVE",
     category: "Finance / Operations",
     description: "Margin intelligence for businesses. Track supplier pricing, invoice changes, and cost pressure before they erode profit.",
-  },
-  {
-    name: "ProcessPilot",
-    status: "LIVE",
-    category: "AI / Cybersecurity",
-    description: "AI engineering, cybersecurity, and workflow automation for modern organizations.",
-  },
-  {
-    name: "Erase",
-    status: "BUILDING",
-    category: "Cybersecurity",
-    description: "Secure digital destruction and data disposal products for individuals and organizations.",
+    href: "https://expensemargin.com",
+    domain: "ExpenseMargin.com",
   },
   {
     name: "Jordan Ranch & Tamarron",
-    status: "BETA",
+    status: "LIVE",
     category: "Community",
-    description: "A private digital community for residents, local businesses, marketplace activity, and neighborhood discovery.",
-  },
-  {
-    name: "Odysseus",
-    status: "LAB",
-    category: "Infrastructure",
-    description: "Autonomous infrastructure monitoring, vulnerability detection, and remediation.",
-  },
-  {
-    name: "TimeSheet.ai",
-    status: "LAB",
-    category: "Workforce",
-    description: "Simple, intelligent time tracking and workforce management for small businesses.",
+    description: "A private digital community for residents, local businesses, marketplace activity, neighborhood deals, and local discovery.",
+    href: "https://jrt.community",
+    domain: "JRT.community",
   },
 ];
 
@@ -59,7 +39,7 @@ export default function Home() {
           <p className="eyebrow">PRODUCTS / SYSTEMS / INTELLIGENCE</p>
           <h1>We build boring products for a world that is anything but.</h1>
           <p className="lede">
-            A technology product company building practical software across AI, cybersecurity, finance, infrastructure, and community.
+            A technology product company building practical software and shipping products people actually use.
           </p>
           <div className="heroActions">
             <a className="primaryButton" href="#products">Explore our products <Arrow /></a>
@@ -85,9 +65,9 @@ export default function Home() {
       <section className="statement shell">
         <p className="sectionLabel">THE PORTFOLIO</p>
         <div className="statementGrid">
-          <h2>Useful products.<br />Built. Shipped. Improved.</h2>
+          <h2>Live products.<br />Built. Shipped. In use.</h2>
           <p>
-            We focus on problems that are operational, expensive, repetitive, overlooked, or simply boring — then build products that make them better.
+            This portfolio only includes products that have reached the market. No concepts, no mockups, and no coming-soon listings.
           </p>
         </div>
       </section>
@@ -99,11 +79,13 @@ export default function Home() {
               <div className="productIndex">0{index + 1}</div>
               <div className="productMeta">
                 <span>{product.category}</span>
-                <span className={`status status${product.status.replace(" ", "")}`}>{product.status}</span>
+                <span className="status statusLIVE">{product.status}</span>
               </div>
               <h3>{product.name}</h3>
               <p>{product.description}</p>
-              <a href="#contact" className="cardLink">View product <Arrow /></a>
+              <a href={product.href} target="_blank" rel="noreferrer" className="cardLink">
+                {product.domain} <Arrow />
+              </a>
             </article>
           ))}
         </div>
@@ -139,7 +121,7 @@ export default function Home() {
           <h2>The best businesses often solve problems nobody brags about.</h2>
           <div>
             <p>
-              Supplier costs. Time tracking. Security controls. Infrastructure reliability. Community coordination. Data disposal.
+              Cost visibility. Local coordination. Operational friction. Everyday problems businesses and communities deal with constantly.
             </p>
             <p>
               These are not glamorous problems. They are useful problems. The Boring Product exists to find them, build the right software, ship it, and keep improving it.
