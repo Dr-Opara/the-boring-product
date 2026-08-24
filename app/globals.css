@@ -26,8 +26,14 @@ a { color: inherit; text-decoration: none; }
 .shell { width: min(1380px, calc(100% - 48px)); margin: 0 auto; }
 .nav { height: 86px; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; border-bottom: 1px solid var(--line); position: relative; z-index: 20; }
 .brand { font-size: 1.02rem; font-weight: 700; letter-spacing: -.03em; }
-.navLinks { display: flex; gap: 34px; font-size: .9rem; color: #c7ced9; }
+.navLinks { display: flex; gap: 34px; font-size: .9rem; color: #c7ced9; align-items: center; }
 .navLinks a:hover, .footerLinks a:hover { color: white; }
+.navDropdown { position: relative; }
+.navDropdownTrigger { display: inline-flex; align-items: center; gap: 6px; }
+.navDropdownMenu { position: absolute; top: calc(100% + 18px); left: -18px; min-width: 170px; padding: 10px; border: 1px solid var(--line); background: rgba(8,12,20,.96); backdrop-filter: blur(18px); border-radius: 12px; opacity: 0; visibility: hidden; transform: translateY(-6px); transition: opacity .2s ease, transform .2s ease, visibility .2s ease; box-shadow: 0 18px 50px rgba(0,0,0,.35); }
+.navDropdownMenu a { display: block; padding: 10px 12px; border-radius: 8px; color: #c7ced9; }
+.navDropdownMenu a:hover { background: rgba(255,255,255,.05); }
+.navDropdown:hover .navDropdownMenu, .navDropdown:focus-within .navDropdownMenu { opacity: 1; visibility: visible; transform: translateY(0); }
 .ghostButton { justify-self: end; border: 1px solid rgba(124,157,255,.34); padding: 12px 16px; border-radius: 10px; font-size: .84rem; background: rgba(255,255,255,.025); }
 
 .hero { min-height: 730px; display: grid; grid-template-columns: 1.05fr .95fr; align-items: center; border-bottom: 1px solid var(--line); overflow: hidden; }
@@ -55,20 +61,24 @@ h1 { font-size: clamp(4rem, 7vw, 7.4rem); line-height: .93; letter-spacing: -.07
 
 .statement { padding: 120px 0 70px; }
 .statementGrid, .aboutGrid { display: grid; grid-template-columns: 1.2fr .8fr; gap: 120px; align-items: end; }
-.statement h2, .technology h2, .about h2 { font-size: clamp(2.5rem, 4.3vw, 5.2rem); line-height: 1; letter-spacing: -.055em; margin: 0; }
-.statementGrid p, .aboutGrid p, .techCopy > p { color: var(--muted); line-height: 1.8; font-size: 1.05rem; }
+.statement h2, .technology h2, .about h2, .categoryHeader h2 { font-size: clamp(2.5rem, 4.3vw, 5.2rem); line-height: 1; letter-spacing: -.055em; margin: 0; }
+.statementGrid p, .aboutGrid p, .techCopy > p, .categoryNote { color: var(--muted); line-height: 1.8; font-size: 1.05rem; }
 
-.products { padding-bottom: 120px; }
+.products { padding-bottom: 120px; scroll-margin-top: 100px; }
+.categoryHeader { padding: 0 0 34px; }
+.categoryNote { max-width: 620px; margin: 22px 0 0; }
 .productGrid { display: grid; grid-template-columns: repeat(3,1fr); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
 .productCard { min-height: 360px; padding: 30px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); display: flex; flex-direction: column; background: linear-gradient(180deg, rgba(255,255,255,.018), rgba(255,255,255,.005)); transition: background .25s ease, transform .25s ease; }
 .productCard:hover { background: linear-gradient(180deg, rgba(79,108,255,.08), rgba(255,255,255,.015)); }
 .productIndex { color: #596273; font-size: .75rem; margin-bottom: 55px; }
 .productMeta { display: flex; justify-content: space-between; gap: 18px; color: #8690a0; font-size: .72rem; text-transform: uppercase; letter-spacing: .08em; }
 .status { color: #8ed8ff; }
-.statusLIVE { color: #6be2a3; } .statusBUILDING { color: #ffbe73; } .statusBETA { color: #89b4ff; } .statusLAB { color: #a98bff; }
+.statusLIVE { color: #6be2a3; }
 .productCard h3 { font-size: 1.75rem; letter-spacing: -.04em; margin: 18px 0 14px; }
 .productCard p { color: var(--muted); line-height: 1.65; margin: 0; max-width: 420px; }
 .cardLink { margin-top: auto; padding-top: 34px; font-size: .86rem; color: #d8deea; }
+
+.hardware { padding: 110px 0 120px; border-top: 1px solid var(--line); scroll-margin-top: 100px; }
 
 .technology { min-height: 720px; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; padding: 100px 0 130px; border-top: 1px solid var(--line); }
 .techVisual { height: 520px; border: 1px solid var(--line); position: relative; overflow: hidden; background: radial-gradient(circle at 50% 55%, rgba(77,105,255,.14), transparent 34%), #050810; }
