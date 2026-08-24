@@ -101,14 +101,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="hardware shell" id="hardware">
-        <div className="categoryHeader">
-          <p className="sectionLabel">PRODUCTS / HARDWARE</p>
-          <h2>Hardware</h2>
-          <p className="categoryNote">Hardware products will appear here once they are live and shipped.</p>
-        </div>
-      </section>
-
       <section className="technology shell" id="technology">
         <div className="techVisual" aria-hidden="true">
           <div className="gridPlane" />
@@ -117,7 +109,7 @@ export default function Home() {
           <div className="techCube cubeThree" />
         </div>
         <div className="techCopy">
-          <p className="sectionLabel">BUILT FOR WHAT'S NEXT</p>
+          <p className="sectionLabel">BUILT FOR WHAT&apos;S NEXT</p>
           <h2>Software at the intersection of intelligence and utility.</h2>
           <p>
             We use modern AI, automation, cloud infrastructure, security engineering, and data systems where they create real leverage — not because they look impressive on a pitch deck.
@@ -133,6 +125,33 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="technology hardwareTechnology shell" id="hardware">
+        <div className="techCopy">
+          <p className="sectionLabel">HARDWARE / BUILT FOR THE PHYSICAL WORLD</p>
+          <h2>Devices engineered where intelligence meets the real world.</h2>
+          <p>
+            We are expanding beyond software into purpose-built hardware — connected devices, edge systems, intelligent sensors, and physical products designed to solve practical problems with the same focus on utility.
+          </p>
+          <div className="capabilities">
+            <span>Connected Devices</span>
+            <span>Edge Computing</span>
+            <span>Embedded Systems</span>
+            <span>Intelligent Sensors</span>
+            <span>Device Security</span>
+            <span>Hardware R&amp;D</span>
+          </div>
+        </div>
+        <div className="techVisual hardwareVisual" aria-hidden="true">
+          <div className="gridPlane" />
+          <div className="deviceShell">
+            <div className="deviceCore" />
+            <span className="devicePort portOne" />
+            <span className="devicePort portTwo" />
+            <span className="devicePort portThree" />
+          </div>
+        </div>
+      </section>
+
       <section className="about shell" id="about">
         <p className="sectionLabel">WHY BORING?</p>
         <div className="aboutGrid">
@@ -142,7 +161,7 @@ export default function Home() {
               Cost visibility. Local coordination. Operational friction. Everyday problems businesses and communities deal with constantly.
             </p>
             <p>
-              These are not glamorous problems. They are useful problems. The Boring Product exists to find them, build the right software, ship it, and keep improving it.
+              These are not glamorous problems. They are useful problems. The Boring Product exists to find them, build the right products, ship them, and keep improving them.
             </p>
           </div>
         </div>
@@ -159,6 +178,11 @@ export default function Home() {
         <div>
           <a className="brand" href="#top">The Boring Product</a>
           <p>We build boring products that solve real problems.</p>
+          <div className="footerContact">
+            <a href="mailto:info@theboringproduct.com">info@theboringproduct.com</a>
+            <span>Austin, TX</span>
+            <a href="https://x.com/TheBoringProduct" target="_blank" rel="noreferrer">X / @TheBoringProduct</a>
+          </div>
         </div>
         <div className="footerLinks">
           <a href="#software">Software</a>
