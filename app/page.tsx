@@ -8,7 +8,9 @@ function BrandLogo() {
   return (
     <span className="brandLogo" aria-label="The Boring Product">
       <span className="brandThe">THE</span>
-      <span className="brandBoring">BORING</span>
+      <span className="brandBoring" aria-hidden="true">
+        <span>B</span><span className="brandSolidO" /><span>RING</span>
+      </span>
       <span className="brandBottom"><span className="brandLines" aria-hidden="true" /><span className="brandProduct">PRODUCT</span></span>
     </span>
   );
