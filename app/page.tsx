@@ -8,7 +8,13 @@ export default function Home() {
       <header className="nav shell">
         <a className="brand" href="#top">The Boring Product</a>
         <nav className="navLinks" aria-label="Primary navigation">
-          <a href="/products">Products</a>
+          <div className="navDropdown">
+            <a className="navDropdownTrigger" href="/products">Products <span aria-hidden="true">⌄</span></a>
+            <div className="navDropdownMenu" aria-label="Product categories">
+              <a href="/products#digital">Digital</a>
+              <a href="/products#devices">Devices</a>
+            </div>
+          </div>
           <a href="#technology">Technology</a>
           <a href="#about">About</a>
         </nav>
