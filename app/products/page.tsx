@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import "../home-refresh.css";
 
 export const metadata: Metadata = {
   title: "Products",
@@ -36,16 +37,26 @@ function Arrow() {
   return <span aria-hidden="true">↗</span>;
 }
 
+function BrandLogo() {
+  return (
+    <span className="brandLogo" aria-label="The Boring Product">
+      <span className="brandThe">THE</span>
+      <span className="brandBoring"><span>B</span><span className="solidO" aria-hidden="true" /><span>RING</span></span>
+      <span className="brandBottom"><span className="brandLines" aria-hidden="true" /><span className="brandProduct">PRODUCT</span></span>
+    </span>
+  );
+}
+
 export default function ProductsPage() {
   return (
     <main>
-      <header className="nav shell">
-        <a className="brand" href="/">The Boring Product</a>
+      <header className="nav shell newNav">
+        <a className="brand brandMark" href="/"><BrandLogo /></a>
         <nav className="navLinks" aria-label="Products navigation">
           <a href="#digital">Digital</a>
           <a href="#devices">Devices</a>
         </nav>
-        <a className="ghostButton" href="/">Back home</a>
+        <a className="ghostButton heroNavButton" href="/">Back home</a>
       </header>
 
       <section className="statement shell productsIntro">
@@ -113,7 +124,7 @@ export default function ProductsPage() {
 
       <footer className="footer shell">
         <div>
-          <a className="brand" href="/">The Boring Product</a>
+          <a className="brand brandMark footerBrand" href="/"><BrandLogo /></a>
           <p>We build boring products that solve real problems.</p>
           <div className="footerContact">
             <a href="mailto:info@theboringproduct.com">info@theboringproduct.com</a>
