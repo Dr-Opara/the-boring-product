@@ -27,11 +27,17 @@ export default function Home() {
       <header className="nav shell">
         <a className="brand" href="#top">The Boring Product</a>
         <nav className="navLinks" aria-label="Primary navigation">
-          <a href="#products">Products</a>
+          <div className="navDropdown">
+            <a className="navDropdownTrigger" href="#software">Products <span aria-hidden="true">⌄</span></a>
+            <div className="navDropdownMenu" aria-label="Product categories">
+              <a href="#software">Software</a>
+              <a href="#hardware">Hardware</a>
+            </div>
+          </div>
           <a href="#technology">Technology</a>
           <a href="#about">About</a>
         </nav>
-        <a className="ghostButton" href="#products">Explore products <Arrow /></a>
+        <a className="ghostButton" href="#software">Explore products <Arrow /></a>
       </header>
 
       <section className="hero shell" id="top">
@@ -42,7 +48,7 @@ export default function Home() {
             A technology product company building practical software and shipping products people actually use.
           </p>
           <div className="heroActions">
-            <a className="primaryButton" href="#products">Explore our products <Arrow /></a>
+            <a className="primaryButton" href="#software">Explore our products <Arrow /></a>
             <a className="textLink" href="#about">Why boring? <span>→</span></a>
           </div>
         </div>
@@ -72,7 +78,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="products shell" id="products">
+      <section className="products shell" id="software">
+        <div className="categoryHeader">
+          <p className="sectionLabel">PRODUCTS / SOFTWARE</p>
+          <h2>Software</h2>
+        </div>
         <div className="productGrid">
           {products.map((product, index) => (
             <article className="productCard" key={product.name}>
@@ -88,6 +98,14 @@ export default function Home() {
               </a>
             </article>
           ))}
+        </div>
+      </section>
+
+      <section className="hardware shell" id="hardware">
+        <div className="categoryHeader">
+          <p className="sectionLabel">PRODUCTS / HARDWARE</p>
+          <h2>Hardware</h2>
+          <p className="categoryNote">Hardware products will appear here once they are live and shipped.</p>
         </div>
       </section>
 
@@ -131,18 +149,10 @@ export default function Home() {
       </section>
 
       <section className="manifesto shell">
-        <div className="manifestoLine">
-          <span>01</span><strong>Find the problem.</strong>
-        </div>
-        <div className="manifestoLine">
-          <span>02</span><strong>Build the simplest useful solution.</strong>
-        </div>
-        <div className="manifestoLine">
-          <span>03</span><strong>Ship it.</strong>
-        </div>
-        <div className="manifestoLine">
-          <span>04</span><strong>Make it better.</strong>
-        </div>
+        <div className="manifestoLine"><span>01</span><strong>Find the problem.</strong></div>
+        <div className="manifestoLine"><span>02</span><strong>Build the simplest useful solution.</strong></div>
+        <div className="manifestoLine"><span>03</span><strong>Ship it.</strong></div>
+        <div className="manifestoLine"><span>04</span><strong>Make it better.</strong></div>
       </section>
 
       <footer className="footer shell" id="contact">
@@ -151,7 +161,8 @@ export default function Home() {
           <p>We build boring products that solve real problems.</p>
         </div>
         <div className="footerLinks">
-          <a href="#products">Products</a>
+          <a href="#software">Software</a>
+          <a href="#hardware">Hardware</a>
           <a href="#technology">Technology</a>
           <a href="#about">About</a>
         </div>
