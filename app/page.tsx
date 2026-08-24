@@ -9,6 +9,7 @@ export default function Home() {
         <a className="brand" href="#top">The Boring Product</a>
         <nav className="navLinks" aria-label="Primary navigation">
           <a href="/products">Products</a>
+          <a href="#technology">Technology</a>
           <a href="#about">About</a>
         </nav>
         <a className="ghostButton" href="/products">Explore products <Arrow /></a>
@@ -38,11 +39,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="statement shell">
-        <p className="sectionLabel">THE PORTFOLIO</p>
+      <section className="statement shell" id="technology">
+        <p className="sectionLabel">TECHNOLOGY</p>
         <div className="statementGrid">
-          <h2>Live products.<br />Built. Shipped. In use.</h2>
-          <p>We only showcase products that have reached the market. Explore the portfolio to see our live digital products and the devices we ship next.</p>
+          <h2>Built with modern technology.<br />Focused on practical utility.</h2>
+          <p>We use AI, automation, cloud infrastructure, security engineering, data systems, embedded technology, and edge computing where they create real value.</p>
         </div>
       </section>
 
@@ -76,6 +77,7 @@ export default function Home() {
         </div>
         <div className="footerLinks">
           <a href="/products">Products</a>
+          <a href="#technology">Technology</a>
           <a href="#about">About</a>
         </div>
         <p className="copyright">© 2026 The Boring Product.</p>
