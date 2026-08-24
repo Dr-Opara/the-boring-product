@@ -8,10 +8,10 @@ export default function Home() {
       <header className="nav shell">
         <a className="brand" href="#top">The Boring Product</a>
         <nav className="navLinks" aria-label="Primary navigation">
-          <a href="/products" target="_blank" rel="noreferrer">Products</a>
+          <a href="/products">Products</a>
           <a href="#about">About</a>
         </nav>
-        <a className="ghostButton" href="/products" target="_blank" rel="noreferrer">Explore products <Arrow /></a>
+        <a className="ghostButton" href="/products">Explore products <Arrow /></a>
       </header>
 
       <section className="hero shell" id="top">
@@ -20,7 +20,7 @@ export default function Home() {
           <h1>We build boring products for a world that is anything but.</h1>
           <p className="lede">A technology product company building practical digital products and devices people actually use.</p>
           <div className="heroActions">
-            <a className="primaryButton" href="/products" target="_blank" rel="noreferrer">Explore our products <Arrow /></a>
+            <a className="primaryButton" href="/products">Explore our products <Arrow /></a>
             <a className="textLink" href="#about">Why boring? <span>→</span></a>
           </div>
         </div>
@@ -75,7 +75,7 @@ export default function Home() {
           </div>
         </div>
         <div className="footerLinks">
-          <a href="/products" target="_blank" rel="noreferrer">Products</a>
+          <a href="/products">Products</a>
           <a href="#about">About</a>
         </div>
         <p className="copyright">© 2026 The Boring Product.</p>
