@@ -29,6 +29,7 @@ export default function Home() {
               <a href="/products#devices">Devices</a>
             </div>
           </div>
+          <a href="/future">Future</a>
           <a href="#technology">Technology</a>
           <a href="#about">About</a>
         </nav>
@@ -74,7 +75,7 @@ export default function Home() {
 
       <footer className="footer shell" id="contact">
         <div><a className="brand brandMark footerBrand" href="#top"><BrandLogo /></a><p>We build boring products that solve real problems.</p><div className="footerContact"><a href="mailto:info@theboringproduct.com">info@theboringproduct.com</a><span>Austin, TX</span><a href="https://x.com/TheBoringProduct" target="_blank" rel="noreferrer">X / @TheBoringProduct</a></div></div>
-        <div className="footerLinks"><a href="/products">Products</a><a href="#technology">Technology</a><a href="#about">About</a></div>
+        <div className="footerLinks"><a href="/products">Products</a><a href="/future">Future</a><a href="#technology">Technology</a><a href="#about">About</a></div>
         <p className="copyright">© 2026 The Boring Product.</p>
       </footer>
     </main>
