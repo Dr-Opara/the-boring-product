@@ -57,6 +57,7 @@ export default function ProductsPage() {
         <nav className="navLinks" aria-label="Products navigation">
           <a href="#digital">Digital</a>
           <a href="#devices">Devices</a>
+          <a href="/future">Future</a>
         </nav>
         <a className="ghostButton heroNavButton" href="/">Back home</a>
       </header>
@@ -65,7 +66,7 @@ export default function ProductsPage() {
         <p className="sectionLabel">PRODUCTS</p>
         <div className="statementGrid">
           <h1 className="productsTitle">Built. Shipped. In use.</h1>
-          <p>We only list products that are live. Digital products are available now, and devices will appear here as they ship.</p>
+          <p>We only list products that are live. Digital products are available now, and devices will appear here as they ship. Future concepts live separately in our Future section.</p>
         </div>
       </section>
 
@@ -134,7 +135,7 @@ export default function ProductsPage() {
             <a href="https://x.com/TheBoringProduct" target="_blank" rel="noreferrer">X / @TheBoringProduct</a>
           </div>
         </div>
-        <div className="footerLinks"><a href="#digital">Digital</a><a href="#devices">Devices</a><a href="/">Home</a></div>
+        <div className="footerLinks"><a href="#digital">Digital</a><a href="#devices">Devices</a><a href="/future">Future</a><a href="/">Home</a></div>
         <p className="copyright">© 2026 The Boring Product.</p>
       </footer>
     </main>
