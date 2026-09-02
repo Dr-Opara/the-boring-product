@@ -1,4 +1,8 @@
 .mobileSiteNav{display:none}
+.sitewidePhone{display:flex;align-items:center;justify-content:center;gap:10px;padding:14px 20px;border-top:1px solid rgba(255,255,255,.08);background:#050810;color:#9ea8b7;font-size:.86rem}
+.sitewidePhone a{color:#d9c3ff;font-weight:700}
+.sitewidePhone a:hover{color:#fff}
+.mobilePhoneLink{color:#d9c3ff!important;font-weight:700}
 
 @media(max-width:980px){
   .mobileSiteNav{display:block;position:sticky;top:0;z-index:1000;width:100%;background:rgba(3,5,10,.96);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.09)}
@@ -19,6 +23,7 @@
   .newNav .heroNavButton{display:none}
   .newNav{grid-template-columns:1fr!important;height:92px!important}
   .newNav .brandMark{justify-self:start}
+  .sitewidePhone{padding:16px 14px}
 }
 
 @media(max-width:640px){
@@ -36,4 +41,5 @@
   .products{padding-bottom:76px!important}
   .productCard{padding:24px!important}
   .footer{padding-top:50px!important;padding-bottom:34px!important;gap:36px!important}
+  .sitewidePhone{flex-direction:column;gap:4px;font-size:.9rem}
 }
