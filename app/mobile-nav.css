@@ -1,0 +1,39 @@
+.mobileSiteNav{display:none}
+
+@media(max-width:980px){
+  .mobileSiteNav{display:block;position:sticky;top:0;z-index:1000;width:100%;background:rgba(3,5,10,.96);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.09)}
+  .mobileMenu{width:min(100% - 28px,1380px);margin:0 auto}
+  .mobileMenu>summary{list-style:none;display:flex;align-items:center;justify-content:space-between;min-height:58px;padding:0 4px;cursor:pointer;color:#f6f7fb;font-size:.92rem;font-weight:700;letter-spacing:.02em}
+  .mobileMenu>summary::-webkit-details-marker,.mobileSubmenu>summary::-webkit-details-marker{display:none}
+  .mobileMenuIcon{font-size:1.25rem;color:#b993ff}
+  .mobileMenu[open] .mobileMenuIcon{font-size:0}
+  .mobileMenu[open] .mobileMenuIcon::after{content:"✕";font-size:1.1rem}
+  .mobileMenuPanel{padding:8px 0 18px;border-top:1px solid rgba(255,255,255,.08)}
+  .mobileTopLink,.mobileSubmenu>summary{display:flex;align-items:center;justify-content:space-between;width:100%;padding:15px 4px;border-bottom:1px solid rgba(255,255,255,.07);color:#d8deea;font-size:.95rem;cursor:pointer}
+  .mobileTopLink:active,.mobileSubmenu>summary:active{color:#fff}
+  .mobileSubmenu{width:100%}
+  .mobileSubmenu>summary{list-style:none}
+  .mobileSubmenu>div{display:grid;padding:6px 0 10px 14px;border-bottom:1px solid rgba(255,255,255,.07)}
+  .mobileSubmenu>div a{padding:12px 10px;color:#aeb8c8;font-size:.88rem;border-left:1px solid rgba(139,44,255,.45)}
+  .mobileSubmenu>div a:active{color:#fff;background:rgba(139,44,255,.08)}
+  .newNav .heroNavButton{display:none}
+  .newNav{grid-template-columns:1fr!important;height:92px!important}
+  .newNav .brandMark{justify-self:start}
+}
+
+@media(max-width:640px){
+  .mobileMenu>summary{min-height:54px}
+  .newNav{height:82px!important}
+  .heroRefresh{min-height:auto!important}
+  .heroCopyRefresh{padding-top:44px!important;padding-bottom:40px!important}
+  .heroCopyRefresh h1{font-size:clamp(2.7rem,14vw,4rem)!important;line-height:1.02!important}
+  .portalScene{height:330px!important}
+  .portalRing{width:240px!important;height:240px!important}
+  .portalBase{width:285px!important}
+  .statement,.about{padding-top:72px!important;padding-bottom:64px!important}
+  .statementGrid,.aboutGrid,.technology{gap:32px!important}
+  .statement h2,.technology h2,.about h2,.categoryHeader h2{font-size:clamp(2.2rem,11vw,3.5rem)!important}
+  .products{padding-bottom:76px!important}
+  .productCard{padding:24px!important}
+  .footer{padding-top:50px!important;padding-bottom:34px!important;gap:36px!important}
+}
