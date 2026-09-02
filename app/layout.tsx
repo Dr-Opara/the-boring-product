@@ -27,10 +27,51 @@ export const metadata: Metadata = {
   },
 };
 
+function MobileNavigation() {
+  return (
+    <nav className="mobileSiteNav" aria-label="Mobile navigation">
+      <details className="mobileMenu">
+        <summary>
+          <span>Menu</span>
+          <span className="mobileMenuIcon" aria-hidden="true">☰</span>
+        </summary>
+        <div className="mobileMenuPanel">
+          <a className="mobileTopLink" href="/">Home</a>
+
+          <details className="mobileSubmenu">
+            <summary>Products <span aria-hidden="true">⌄</span></summary>
+            <div>
+              <a href="/products">All Products</a>
+              <a href="/products/expensemargin">ExpenseMargin</a>
+              <a href="/products/jrt-community">Jordan Ranch &amp; Tamarron</a>
+              <a href="/products/processpilot-technologies">ProcessPilot Technologies</a>
+            </div>
+          </details>
+
+          <details className="mobileSubmenu">
+            <summary>Contracts <span aria-hidden="true">⌄</span></summary>
+            <div>
+              <a href="/contracts">Contracts &amp; Partnerships</a>
+              <a href="/contracts/client-engagements">Client Engagement</a>
+            </div>
+          </details>
+
+          <a className="mobileTopLink" href="/future">Future</a>
+          <a className="mobileTopLink" href="/technology">Technology</a>
+          <a className="mobileTopLink" href="/about">About</a>
+        </div>
+      </details>
+    </nav>
+  );
+}
+
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <MobileNavigation />
+        {children}
+      </body>
     </html>
   );
 }
