@@ -13,6 +13,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: "https://theboringproduct.com/contracts",
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+    {
       url: "https://theboringproduct.com/future",
       changeFrequency: "weekly",
       priority: 0.8,
