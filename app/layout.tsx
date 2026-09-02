@@ -60,7 +60,6 @@ function MobileNavigation() {
           <a className="mobileTopLink" href="/future">Future</a>
           <a className="mobileTopLink" href="/technology">Technology</a>
           <a className="mobileTopLink" href="/about">About</a>
-          <a className="mobileTopLink mobilePhoneLink" href="tel:+13467454398">346-745-4398</a>
         </div>
       </details>
     </nav>
@@ -73,10 +72,6 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       <body>
         <MobileNavigation />
         {children}
-        <div className="sitewidePhone" aria-label="Contact phone number">
-          <span>Call us</span>
-          <a href="tel:+13467454398">346-745-4398</a>
-        </div>
       </body>
     </html>
   );
