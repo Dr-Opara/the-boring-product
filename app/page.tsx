@@ -2,7 +2,7 @@ import "./home-refresh.css";
 
 function Arrow() { return <span aria-hidden="true">→</span>; }
 function BrandLogo() { return <span className="brandLogo" aria-label="The Boring Product"><span className="brandThe">THE</span><span className="brandBoring" aria-hidden="true"><span>B</span><span className="brandSolidO" /><span>RING</span></span><span className="brandBottom"><span className="brandLines" aria-hidden="true" /><span className="brandProduct">PRODUCT</span></span></span>; }
-function BrandWithLegal({ footer = false }: { footer?: boolean }) { return <span className={`brandLegalWrap${footer ? " footerBrandLegalWrap" : ""}`}><BrandLogo /><span className="brandLegal">A d/b/a of ProcessPilot Technologies LLC</span></span>; }
+function BrandWithLegal({ footer = false }: { footer?: boolean }) { return <span className={`brandLegalWrap${footer ? " footerBrandLegalWrap" : ""}`}><BrandLogo /><span className="brandLegal">A ProcessPilot Technology Company</span></span>; }
 
 export default function Home() {
   return <main>
