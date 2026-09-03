@@ -9,8 +9,7 @@ export default function Home() {
     <header className="nav shell newNav">
       <a className="brand brandMark" href="/"><BrandWithLegal /></a>
       <nav className="navLinks" aria-label="Primary navigation">
-        <div className="navDropdown"><a className="navDropdownTrigger" href="/products">Products <span aria-hidden="true">⌄</span></a><div className="navDropdownMenu"><a href="/products/expensemargin">ExpenseMargin</a><a href="/products/jrt-community">Jordan Ranch &amp; Tamarron</a><a href="/products/processpilot-technologies">ProcessPilot Technologies</a></div></div>
-        <div className="navDropdown"><a className="navDropdownTrigger" href="/contracts">Contracts <span aria-hidden="true">⌄</span></a><div className="navDropdownMenu"><a href="/contracts/client-engagements">Client Engagement</a></div></div>
+        <div className="navDropdown"><a className="navDropdownTrigger" href="/products">Products <span aria-hidden="true">⌄</span></a><div className="navDropdownMenu"><a href="/products/expensemargin">ExpenseMargin</a><a href="/products/jrt-community">Jordan Ranch &amp; Tamarron</a></div></div>
         <a href="/future">Future</a><a href="/technology">Technology</a><a href="/about">About</a>
       </nav>
       <a className="ghostButton heroNavButton" href="/products">Explore Products</a>
@@ -26,6 +25,6 @@ export default function Home() {
 
     <section className="manifesto shell"><div className="manifestoLine"><span>01</span><strong>Find the problem.</strong></div><div className="manifestoLine"><span>02</span><strong>Build the simplest useful solution.</strong></div><div className="manifestoLine"><span>03</span><strong>Ship it.</strong></div><div className="manifestoLine"><span>04</span><strong>Make it better.</strong></div></section>
 
-    <footer className="footer shell"><div><a className="brand brandMark footerBrand" href="/"><BrandWithLegal footer /></a><p>We build boring products that solve real problems.</p><div className="footerContact"><a href="mailto:hello@theboringproduct.com">hello@theboringproduct.com</a><a href="tel:+13467454398">346-745-4398</a><span>4202 Gnarl Dr, Austin, TX 78731</span><a href="https://x.com/TheBoringProduct" target="_blank" rel="noreferrer">X / @TheBoringProduct</a></div></div><div className="footerLinks"><a href="/products">Products</a><a href="/contracts">Contracts</a><a href="/contracts/client-engagements">Client Engagement</a><a href="/future">Future</a><a href="/technology">Technology</a><a href="/about">About</a></div><p className="copyright">© 2026 The Boring Product.</p></footer>
+    <footer className="footer shell"><div><a className="brand brandMark footerBrand" href="/"><BrandWithLegal footer /></a><p>We build boring products that solve real problems.</p><div className="footerContact"><a href="mailto:hello@theboringproduct.com">hello@theboringproduct.com</a><a href="tel:+13467454398">346-745-4398</a><span>4202 Gnarl Dr, Austin, TX 78731</span><a href="https://x.com/TheBoringProduct" target="_blank" rel="noreferrer">X / @TheBoringProduct</a></div></div><div className="footerLinks"><a href="/products">Products</a><a href="/future">Future</a><a href="/technology">Technology</a><a href="/about">About</a></div><p className="copyright">© 2026 The Boring Product.</p></footer>
   </main>;
 }
