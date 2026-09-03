@@ -45,15 +45,6 @@ function MobileNavigation() {
               <a href="/products">All Products</a>
               <a href="/products/expensemargin">ExpenseMargin</a>
               <a href="/products/jrt-community">Jordan Ranch &amp; Tamarron</a>
-              <a href="/products/processpilot-technologies">ProcessPilot Technologies</a>
-            </div>
-          </details>
-
-          <details className="mobileSubmenu">
-            <summary>Contracts <span aria-hidden="true">⌄</span></summary>
-            <div>
-              <a href="/contracts">Contracts &amp; Partnerships</a>
-              <a href="/contracts/client-engagements">Client Engagement</a>
             </div>
           </details>
 
