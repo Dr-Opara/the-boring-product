@@ -9,7 +9,7 @@ export default function Home() {
     <header className="nav shell newNav">
       <a className="brand brandMark" href="/"><BrandWithLegal /></a>
       <nav className="navLinks" aria-label="Primary navigation">
-        <div className="navDropdown"><a className="navDropdownTrigger" href="/products">Products <span aria-hidden="true">⌄</span></a><div className="navDropdownMenu"><a href="/products/expensemargin">ExpenseMargin</a><a href="/products/jrt-community">Jordan Ranch &amp; Tamarron</a></div></div>
+        <div className="navDropdown"><a className="navDropdownTrigger" href="/products">Products <span aria-hidden="true">⌄</span></a><div className="navDropdownMenu"><a href="/products/expensemargin">ExpenseMargin</a><a href="/products/jrt-community">Jordan Ranch &amp; Tamarron</a><a href="/products/localbiz">LocalBiz.lol</a></div></div>
         <a href="/future">Future</a><a href="/technology">Technology</a><a href="/about">About</a>
       </nav>
       <a className="ghostButton heroNavButton" href="/products">Explore Products</a>
