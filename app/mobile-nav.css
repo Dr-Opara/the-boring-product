@@ -1,5 +1,5 @@
 .mobileSiteNav{display:none}
-.footerContact a[href="mailto:hello@theboringproduct.com"]::after{content:"346-745-4398";display:block;margin-top:9px;color:#9ea8b7;font-weight:400}
+a[href="/products/processpilot-technologies"],a[href="/contracts"],a[href="/contracts/client-engagements"]{display:none!important}
 
 @media(max-width:980px){
   .mobileSiteNav{display:block;position:sticky;top:0;z-index:1000;width:100%;background:rgba(3,5,10,.96);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.09)}
