@@ -1,12 +1,20 @@
 import { Arrow, PageShell, SectionIntro, Status } from "./components";
 import InteractiveCore from "./interactive-core";
 
+const eventLog = [
+  ["21:44:02", "AI", "agent orchestration graph ready"],
+  ["21:44:05", "CYBER", "defensive telemetry stream healthy"],
+  ["21:44:08", "PALMPAY", "biometric prototype handshake verified"],
+  ["21:44:11", "EDGE", "device lab channel standing by"],
+];
+
 export default function Home() {
   return (
     <PageShell>
-      <section className="homeHero shell">
+      <section className="homeHero shell remixHero">
         <div className="heroNoise" aria-hidden="true" />
         <div className="heroCopy">
+          <div className="heroRelease"><span /> TBP SYSTEMS LAB — ACTIVE DEVELOPMENT</div>
           <p className="eyebrow">THE BORING PRODUCT / FUTURE SYSTEMS LAB</p>
           <h1>WE BUILD INTELLIGENT SYSTEMS FOR THE REAL WORLD.</h1>
           <p className="heroDeck">AI applications. Cybersecurity technology. Future payment systems.</p>
@@ -24,6 +32,79 @@ export default function Home() {
         <span>CYBERSECURITY</span><i />
         <span>FUTURE HARDWARE</span><i />
         <span>BIOMETRIC PAYMENTS</span>
+      </section>
+
+      <section className="systemsLab shell" aria-label="The Boring Product systems lab">
+        <div className="systemsLabHeading">
+          <div>
+            <p className="eyebrow">// SYSTEMS LAB — PORTFOLIO TELEMETRY</p>
+            <h2>One company. Multiple technology systems.</h2>
+          </div>
+          <p>The portfolio behaves like a technology lab rather than a collection of static cards: AI orchestration, defensive visibility, biometric authorization and future edge hardware.</p>
+        </div>
+
+        <div className="systemWindow">
+          <div className="systemWindowBar">
+            <div className="windowIdentity"><span className="windowDot" /><strong>TBP.CONTROL</strong><small>/ portfolio overview</small></div>
+            <div className="windowMeta"><span>LAB MODE</span><span>ENCRYPTED</span><span>BUILD 26.09</span></div>
+          </div>
+
+          <aside className="systemSidebar" aria-label="System modules">
+            <span className="active">Overview <b>01</b></span>
+            <span>AI Systems <b>02</b></span>
+            <span>Cyber Defense <b>03</b></span>
+            <span>PalmPay <b>04</b></span>
+            <span>Device Lab <b>05</b></span>
+          </aside>
+
+          <div className="systemCanvas">
+            <div className="systemMetrics">
+              <article><span>PORTFOLIO STATE</span><strong>ACTIVE</strong><small>4 technology domains</small></article>
+              <article><span>AI SYSTEMS</span><strong>R&amp;D</strong><small>agentic + security</small></article>
+              <article><span>CYBER DEFENSE</span><strong>ONLINE</strong><small>defensive research</small></article>
+              <article><span>PALMPAY</span><strong>PROTO</strong><small>biometric payments</small></article>
+            </div>
+
+            <div className="systemPanels">
+              <article className="systemPanel aiPanel">
+                <header><span>AI ORCHESTRATION</span><small>GRAPH / CONCEPT</small></header>
+                <div className="agentGraph" aria-hidden="true">
+                  <span className="agentNode nodeMain">CORE</span>
+                  <span className="agentNode nodeA">TOOLS</span>
+                  <span className="agentNode nodeB">RAG</span>
+                  <span className="agentNode nodeC">POLICY</span>
+                  <span className="agentNode nodeD">HUMAN</span>
+                  <i className="linkA"/><i className="linkB"/><i className="linkC"/><i className="linkD"/>
+                </div>
+                <footer><span>Reason</span><span>Retrieve</span><span>Act</span><span>Verify</span></footer>
+              </article>
+
+              <article className="systemPanel cyberPanel">
+                <header><span>DEFENSIVE VISIBILITY</span><small>MONITOR / CONCEPT</small></header>
+                <div className="cyberScope" aria-hidden="true">
+                  <i className="scopeRing ring1"/><i className="scopeRing ring2"/><i className="scopeRing ring3"/>
+                  <i className="scopeSweep"/><b className="threatPoint point1"/><b className="threatPoint point2"/><b className="threatPoint point3"/>
+                </div>
+                <footer><span>Network</span><span>Identity</span><span>Cloud</span><span>Edge</span></footer>
+              </article>
+
+              <article className="systemPanel palmPanel">
+                <header><span>PALMPAY AUTH FLOW</span><small>PROTOTYPE</small></header>
+                <div className="authFlow">
+                  <div><b>01</b><span>PALM</span><small>capture</small></div><i>→</i>
+                  <div><b>02</b><span>IDENTITY</span><small>encrypt</small></div><i>→</i>
+                  <div><b>03</b><span>PAY</span><small>authorize</small></div>
+                </div>
+                <footer><span>Biometric</span><span>Encrypted</span><span>Tokenized</span></footer>
+              </article>
+            </div>
+
+            <div className="eventConsole">
+              <div className="consoleHead"><span>// ACTIVITY FEED</span><small>SIMULATED LAB TELEMETRY</small></div>
+              {eventLog.map(([time, system, message]) => <div className="consoleRow" key={`${time}-${system}`}><time>{time}</time><b>{system}</b><span>{message}</span><em>OK</em></div>)}
+            </div>
+          </div>
+        </div>
       </section>
 
       <section className="domainSection shell domain-ai">
