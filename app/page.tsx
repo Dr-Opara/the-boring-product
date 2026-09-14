@@ -1,30 +1,87 @@
-import "./home-refresh.css";
-
-function Arrow() { return <span aria-hidden="true">→</span>; }
-function BrandLogo() { return <span className="brandLogo" aria-label="The Boring Product"><span className="brandThe">THE</span><span className="brandBoring" aria-hidden="true"><span>B</span><span className="brandSolidO" /><span>RING</span></span><span className="brandBottom"><span className="brandLines" aria-hidden="true" /><span className="brandProduct">PRODUCT</span></span></span>; }
-function BrandWithLegal({ footer = false }: { footer?: boolean }) { return <span className={`brandLegalWrap${footer ? " footerBrandLegalWrap" : ""}`}><BrandLogo /><span className="brandLegal">A ProcessPilot Technology Company</span></span>; }
+import { Arrow, PageShell, SectionIntro, Status } from "./components";
+import InteractiveCore from "./interactive-core";
 
 export default function Home() {
-  return <main>
-    <header className="nav shell newNav">
-      <a className="brand brandMark" href="/"><BrandWithLegal /></a>
-      <nav className="navLinks" aria-label="Primary navigation">
-        <div className="navDropdown"><a className="navDropdownTrigger" href="/products">Products <span aria-hidden="true">⌄</span></a><div className="navDropdownMenu"><a href="/products/expensemargin">ExpenseMargin</a><a href="/products/jrt-community">Jordan Ranch &amp; Tamarron</a><a href="/products/localbiz">LocalBiz.lol</a></div></div>
-        <a href="/future">Future</a><a href="/technology">Technology</a><a href="/about">About</a>
-      </nav>
-      <a className="ghostButton heroNavButton" href="/products">Explore Products</a>
-    </header>
+  return (
+    <PageShell>
+      <section className="homeHero shell">
+        <div className="heroNoise" aria-hidden="true" />
+        <div className="heroCopy">
+          <p className="eyebrow">THE BORING PRODUCT / FUTURE SYSTEMS LAB</p>
+          <h1>WE BUILD INTELLIGENT SYSTEMS FOR THE REAL WORLD.</h1>
+          <p className="heroDeck">AI applications. Cybersecurity technology. Future payment systems.</p>
+          <div className="heroActions">
+            <a className="primaryCta" href="/technology">Explore the technology <Arrow /></a>
+            <a className="secondaryCta" href="/products">View products</a>
+          </div>
+          <div className="heroTelemetry"><span>AI // ACTIVE</span><span>CYBER // ACTIVE</span><span>PALMPAY // PROTOTYPE</span></div>
+        </div>
+        <InteractiveCore />
+      </section>
 
-    <section className="hero shell heroRefresh" id="top"><div className="heroCopy heroCopyRefresh"><h1>We build products<br />that solve real problems.</h1><p className="lede">The Boring Product builds digital products and devices that make life simpler, businesses smarter, and the future more connected.</p><div className="heroActions"><a className="primaryButton primaryButtonRefresh" href="/products">Explore Products <Arrow /></a></div></div><div className="portalScene" aria-hidden="true"><div className="portalGlow"/><div className="portalRing"/><div className="portalBase"><div className="portalBaseInner"/></div><div className="portalFloor"/></div></section>
+      <section className="signalStrip shell" aria-label="Company focus">
+        <span>ARTIFICIAL INTELLIGENCE</span><i />
+        <span>CYBERSECURITY</span><i />
+        <span>FUTURE HARDWARE</span><i />
+        <span>BIOMETRIC PAYMENTS</span>
+      </section>
 
-    <section className="valueStrip shell" aria-label="What we value"><article><span className="valueIcon">◌</span><div><h3>Innovative by Design</h3><p>We create products that combine simplicity, usability, and intelligence.</p></div></article><article><span className="valueIcon">◇</span><div><h3>Secure &amp; Reliable</h3><p>Security and reliability are built in from day one.</p></div></article><article><span className="valueIcon">↗</span><div><h3>Built for Impact</h3><p>Everything we build is designed to make a meaningful difference.</p></div></article><article><span className="valueIcon">◎</span><div><h3>Focused on You</h3><p>We build for real people and real businesses with real needs.</p></div></article></section>
+      <section className="domainSection shell domain-ai">
+        <div className="domainNumber">01</div>
+        <div className="domainCopy">
+          <Status tone="violet">ARTIFICIAL INTELLIGENCE</Status>
+          <h2>Systems that think, automate and act.</h2>
+          <p>We design AI applications and agentic systems that can reason across workflows, coordinate tools, secure AI-enabled environments and turn complex operations into intelligent systems.</p>
+          <div className="pillRow"><span>Agentic AI</span><span>AI Security</span><span>Intelligent Automation</span><span>AI Applications</span></div>
+          <a className="textCta" href="/ai">Enter AI <Arrow /></a>
+        </div>
+        <div className="miniVisual aiVisual" aria-hidden="true"><div className="orbitalMesh"><i/><i/><i/></div><span className="scanLine" /></div>
+      </section>
 
-    <section className="statement shell"><p className="sectionLabel">TECHNOLOGY</p><div className="statementGrid"><h2>Built with modern technology.<br />Focused on practical utility.</h2><div><p>We use AI, automation, cloud infrastructure, security engineering, data systems, embedded technology, and edge computing where they create real value.</p><a className="cardLink" href="/technology">Explore Technology <Arrow/></a></div></div></section>
+      <section className="domainSection shell domain-cyber">
+        <div className="domainNumber">02</div>
+        <div className="domainCopy">
+          <Status tone="cyan">CYBERSECURITY</Status>
+          <h2>Technology built to see what others don’t.</h2>
+          <p>Defensive security applications, network defense, threat detection and next-generation security hardware designed for visibility, resilience and authorized security testing.</p>
+          <div className="pillRow"><span>Security Applications</span><span>Network Defense</span><span>Threat Detection</span><span>Security Hardware</span></div>
+          <a className="textCta" href="/cybersecurity">Enter cybersecurity <Arrow /></a>
+        </div>
+        <div className="miniVisual cyberVisual" aria-hidden="true"><div className="radar"><i/><i/><i/></div><span className="scanLine" /></div>
+      </section>
 
-    <section className="about shell"><p className="sectionLabel">WHY BORING?</p><div className="aboutGrid"><h2>The best businesses often solve problems nobody brags about.</h2><div><p>Cost visibility. Local coordination. Operational friction. Everyday problems businesses and communities deal with constantly.</p><p>These are not glamorous problems. They are useful problems. The Boring Product exists to find them, build the right products, ship them, and keep improving them.</p><a className="cardLink" href="/about">About The Boring Product <Arrow/></a></div></div></section>
+      <section className="palmpayFeature shell">
+        <div className="palmCopy">
+          <div className="domainNumber">03</div>
+          <Status tone="violet">PALMPAY / PROTOTYPE</Status>
+          <h2>YOUR HAND IS YOUR WALLET.</h2>
+          <p>Palm-based identity and payment technology designed to transform a biometric signature into encrypted identity and payment authorization.</p>
+          <a className="primaryCta" href="/palmpay">Explore PalmPay <Arrow /></a>
+        </div>
+        <div className="palmSequence" aria-label="PalmPay concept sequence">
+          <div className="palmHand" aria-hidden="true"><span className="finger f1"/><span className="finger f2"/><span className="finger f3"/><span className="finger f4"/><span className="finger f5"/><span className="palmBody"/><i className="scanLine"/></div>
+          <div className="sequenceSteps"><span>01 / PALM SCAN</span><b>→</b><span>02 / ENCRYPTED IDENTITY</span><b>→</b><span>03 / PAYMENT AUTHORIZATION</span></div>
+        </div>
+      </section>
 
-    <section className="manifesto shell"><div className="manifestoLine"><span>01</span><strong>Find the problem.</strong></div><div className="manifestoLine"><span>02</span><strong>Build the simplest useful solution.</strong></div><div className="manifestoLine"><span>03</span><strong>Ship it.</strong></div><div className="manifestoLine"><span>04</span><strong>Make it better.</strong></div></section>
+      <section className="expenseFeature shell">
+        <div>
+          <Status tone="live">B2B PLATFORM / LIVE</Status>
+          <h2>ExpenseMargin</h2>
+        </div>
+        <p>Margin and cost intelligence for businesses. Our established B2B platform remains part of the ecosystem while The Boring Product expands deeper into AI, cybersecurity and future technology.</p>
+        <a className="textCta" href="/products/expensemargin">View platform <Arrow /></a>
+      </section>
 
-    <footer className="footer shell"><div><a className="brand brandMark footerBrand" href="/"><BrandWithLegal footer /></a><p>We build boring products that solve real problems.</p><div className="footerContact"><a href="mailto:hello@theboringproduct.com">hello@theboringproduct.com</a><a href="tel:+13467454398">346-745-4398</a><span>4202 Gnarl Dr, Austin, TX 78731</span><a href="https://x.com/TheBoringProduct" target="_blank" rel="noreferrer">X / @TheBoringProduct</a></div></div><div className="footerLinks"><a href="/products">Products</a><a href="/future">Future</a><a href="/technology">Technology</a><a href="/about">About</a></div><p className="copyright">© 2026 The Boring Product.</p></footer>
-  </main>;
+      <section className="technologyPreview shell">
+        <SectionIntro eyebrow="TECHNOLOGY / 04" title="Software. Hardware. Intelligence." body="We are building a product ecosystem that can move from cloud software to edge devices, security appliances and next-generation payment experiences." />
+        <div className="techMatrix">
+          <article><span>01</span><h3>AI Systems</h3><p>Agentic applications, AI security and intelligent automation.</p></article>
+          <article><span>02</span><h3>Security Systems</h3><p>Monitoring, detection, network defense and defensive tooling.</p></article>
+          <article><span>03</span><h3>Future Hardware</h3><p>Portable security appliances, scanners and edge devices.</p></article>
+          <article><span>04</span><h3>Identity & Payments</h3><p>Biometric interaction and secure future payment systems.</p></article>
+        </div>
+      </section>
+    </PageShell>
+  );
 }
