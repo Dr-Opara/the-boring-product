@@ -31,8 +31,8 @@ export function PageShell({ children }: { children: ReactNode }) {
   return <main className="terminalSite"><SiteHeader />{children}<SiteFooter /></main>;
 }
 
-export function Status({ children }: { children: ReactNode }) {
-  return <span>[ {children} ]</span>;
+export function Status({ children, tone }: { children: ReactNode; tone?: "neutral" | "violet" | "cyan" | "live" }) {
+  return <span className={tone ? `status status-${tone}` : "status"}>[ {children} ]</span>;
 }
 
 export function Arrow() { return <span aria-hidden="true">-&gt;</span>; }
