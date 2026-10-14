@@ -1,20 +1,17 @@
 import type { ReactNode } from "react";
 
 export const navItems = [
-  ["Products", "/#products"],
-  ["About", "/about"],
+  ["Explore", "/explore"],
   ["Dr. O", "/dr-o"],
 ] as const;
 
 export function SiteHeader() {
   return (
     <header className="terminalHeader">
-      <a href="/" className="terminalBrand">&gt; [ THE BORING PRODUCT v1.0.0 ]</a>
+      <a href="/" className="terminalBrand">PS C:\\TBP&gt; <span>THE BORING PRODUCT</span></a>
       <nav aria-label="Primary navigation">
-        <a href="/#products">[ products ]</a>
-        <a href="/about">[ about ]</a>
+        <a className="exploreCmd" href="/explore">[ explore ]</a>
         <a href="/dr-o">[ dr. o ]</a>
-        <a className="exploreCmd" href="/#products">[ explore -&gt; ]</a>
       </nav>
     </header>
   );
@@ -23,8 +20,8 @@ export function SiteHeader() {
 export function SiteFooter() {
   return (
     <footer className="terminalFooter">
-      <span>&gt; OpenMaps + Odesseus // built and shipped by Dr. O.</span>
-      <span>Built by Dr. O. <i aria-hidden="true" /></span>
+      <span>© 2026 The Boring Product</span>
+      <span>built by Dr. O <i aria-hidden="true" /></span>
     </footer>
   );
 }
@@ -40,5 +37,5 @@ export function Status({ children, tone }: { children: ReactNode; tone?: "neutra
 export function Arrow() { return <span aria-hidden="true">-&gt;</span>; }
 
 export function SectionIntro({ eyebrow, title, body }: { eyebrow: string; title: string; body: string }) {
-  return <section className="terminalPageSection"><p className="promptText">$ {eyebrow.toLowerCase()}</p><h2>{title}</h2><p>{body}</p></section>;
+  return <section className="terminalPageSection"><p className="promptText">PS&gt; {eyebrow.toLowerCase()}</p><h2>{title}</h2><p>{body}</p></section>;
 }
