@@ -13,7 +13,7 @@ export default function ProductsPage() {
       <section className="terminalPageSection">
         <p className="promptText">$ ls products</p>
         <h1>PRODUCTS</h1>
-        <p>Two products. No filler.</p>
+        <p>Current public portfolio.</p>
       </section>
 
       <section className="terminalPageSection">
