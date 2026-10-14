@@ -1,11 +1,37 @@
 import type { Metadata } from "next";
 import { PageShell } from "../components";
 
-export const metadata: Metadata = { title: "About", description: "About The Boring Product, a future technology product company.", alternates: { canonical: "/about" } };
+export const metadata: Metadata = {
+  title: "About",
+  description: "About The Boring Product and the products OpenMaps and Odesseus.",
+  alternates: { canonical: "/about" },
+};
 
-export default function AboutPage(){return <PageShell>
-<section className="pageHero shell"><div><p className="eyebrow">ABOUT</p><h1>USEFUL TECHNOLOGY. AMBITIOUS SYSTEMS.</h1></div><div className="heroSide"><p>The Boring Product is a technology product company developing artificial intelligence, cybersecurity software and hardware, future payment systems and practical products that solve real operating problems.</p></div></section>
-<section className="contentGrid shell"><div><p className="eyebrow">WHY BORING?</p><h2>Because the problem matters more than the hype.</h2></div><div><p>We use a deliberately understated name for a company with an ambitious scope. Our job is to identify valuable problems, build useful technology around them and keep improving the result.</p><p>That can mean an AI agent, a security appliance, a biometric payment interaction or a margin-intelligence platform. The form changes. The standard does not: useful, secure and thoughtfully engineered.</p></div></section>
-<section className="contentGrid shell"><div><p className="eyebrow">OPERATING MODEL</p><h2>Build. Test. Ship. Evolve.</h2></div><div className="cardGrid"><article><span>01</span><h3>Find the signal</h3><p>Start with a real problem, emerging technical opportunity or unmet need.</p></article><article><span>02</span><h3>Prototype fast</h3><p>Turn the idea into something tangible enough to learn from.</p></article><article><span>03</span><h3>Engineer responsibly</h3><p>Security, usability and clear development status are part of the product.</p></article><article><span>04</span><h3>Ship what earns it</h3><p>Move products from research to prototype to beta to live when the evidence supports it.</p></article></div></section>
-<section className="contentGrid shell"><div><p className="eyebrow">COMPANY</p><h2>A ProcessPilot Technology Company.</h2></div><div><p>The corporate attribution remains beneath The Boring Product brand while the product portfolio itself stays focused on The Boring Product’s AI, cybersecurity, PalmPay and ExpenseMargin ecosystem.</p></div></section>
-</PageShell>}
+export default function AboutPage() {
+  return (
+    <PageShell>
+      <section className="terminalPageSection">
+        <p className="promptText">$ cat ./about.txt</p>
+        <h1>ABOUT THE BORING PRODUCT</h1>
+        <p>The Boring Product is a focused portfolio for products I have built and shipped.</p>
+      </section>
+
+      <section className="terminalPageSection splitTerminal">
+        <div>
+          <p className="promptText">$ ls portfolio</p>
+          <h2>TWO PRODUCTS.</h2>
+        </div>
+        <div className="terminalList">
+          <a href="https://openmaps.tech" target="_blank" rel="noreferrer"><span>01</span><strong>OpenMaps</strong><em>EARLY ACCESS</em></a>
+          <a href="https://odesseus.ai" target="_blank" rel="noreferrer"><span>02</span><strong>Odesseus</strong><em>LIVE</em></a>
+        </div>
+      </section>
+
+      <section className="terminalPageSection">
+        <p className="promptText">$ cat ./principle.md</p>
+        <h2>BUILD USEFUL THINGS. SHIP THEM.</h2>
+        <p>The portfolio stays deliberately narrow. If a product is not OpenMaps or Odesseus, it does not belong in the public portfolio.</p>
+      </section>
+    </PageShell>
+  );
+}
