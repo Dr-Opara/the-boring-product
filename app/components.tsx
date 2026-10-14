@@ -21,7 +21,7 @@ export function SiteHeader() {
 export function SiteFooter() {
   return (
     <footer className="terminalFooter">
-      <span>&gt; OpenMaps and Odesseus -- two products, one portfolio.</span>
+      <span>&gt; Parent company + product portfolio // current: OpenMaps, Odesseus.</span>
       <span>Built by Dr. O. <i aria-hidden="true" /></span>
     </footer>
   );
