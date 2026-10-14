@@ -22,7 +22,7 @@ export function SiteFooter() {
   return (
     <footer className="terminalFooter">
       <span>&gt; OpenMaps and Odesseus -- two products, one portfolio.</span>
-      <span>Built by Emmanuel Opara. <i aria-hidden="true" /></span>
+      <span>Built by Dr. O. <i aria-hidden="true" /></span>
     </footer>
   );
 }
