@@ -7,14 +7,14 @@ export const metadata: Metadata = {
     default: "The Boring Product — OpenMaps & Odesseus",
     template: "%s | The Boring Product",
   },
-  description: "A focused portfolio of two shipped products: OpenMaps and Odesseus.",
+  description: "The Boring Product is the parent company and portfolio for products built, owned, and shipped by Dr. O.",
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     url: "https://theboringproduct.com",
     siteName: "The Boring Product",
     title: "The Boring Product — OpenMaps & Odesseus",
-    description: "Two products. Built to solve real problems.",
+    description: "Parent company and product portfolio. Current public products: OpenMaps and Odesseus.",
   },
   twitter: {
     card: "summary_large_image",
