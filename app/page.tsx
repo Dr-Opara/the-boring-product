@@ -86,15 +86,14 @@ export default function Home() {
     <main className="terminalSite">
       <header className="terminalHeader">
         <a href="/" className="terminalBrand">&gt; [ THE BORING PRODUCT v1.0.0 ]</a>
-        <nav><a href="#products">[ products ]</a><a href="/about">[ about ]</a><a className="exploreCmd" href="#products">[ explore -&gt; ]</a></nav>
+        <nav><a href="#products">[ products ]</a><a href="/about">[ about ]</a><a href="/dr-o">[ dr. o ]</a><a className="exploreCmd" href="#products">[ explore -&gt; ]</a></nav>
       </header>
 
       <section className="terminalHero">
         <div className="heroTerminal">
           <Prompt>cat ./README.md</Prompt>
-          <h2 className="heroRole">Parent company. Product portfolio.</h2>
-          <p>A home for the products built, owned, and shipped by Dr. O.</p>
-          <p className="heroSubline">Current public portfolio: OpenMaps + Odesseus.</p>
+          <h2 className="heroRole">Products built because they should exist.</h2>
+          <p className="heroSubline">OpenMaps + Odesseus.</p>
           <Prompt>ls ./portfolio</Prompt>
           <div className="asciiTable" role="table" aria-label="Products">
             <div className="asciiRow asciiHead"><span>#</span><span>NAME</span><span>STATUS</span><span>DESCRIPTION</span></div>
@@ -103,7 +102,7 @@ export default function Home() {
           </div>
         </div>
         <div className="heroAside">
-          <div><p>Parent company.</p><p>Product portfolio.</p><p>Built by Dr. O.</p><b>—</b><a href="#openmaps">&gt; OpenMaps</a><a href="#odesseus">&gt; Odesseus</a></div>
+          <div><p>Built by Dr. O.</p><p>Useful products.</p><p>Shipped to the real world.</p><b>—</b><a href="#openmaps">&gt; OpenMaps</a><a href="#odesseus">&gt; Odesseus</a></div>
           <pre className="asciiGlobe" aria-hidden="true">{`           .-""""-.
        .-'          '-.
      .'    .-""""-.    '.
@@ -140,7 +139,7 @@ export default function Home() {
       </section>
 
       <footer className="terminalFooter">
-        <span>&gt; Parent company + product portfolio // current: OpenMaps, Odesseus.</span>
+        <span>&gt; OpenMaps + Odesseus // built and shipped by Dr. O.</span>
         <span>Built by Dr. O. <i aria-hidden="true" /></span>
       </footer>
     </main>
