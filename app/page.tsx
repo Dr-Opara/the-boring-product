@@ -62,7 +62,7 @@ function OdesseusPreview() {
           {["Home","Jobs","Applications","Resume","Interview Prep","Career Coach"].map((item,i)=><span className={i===0?"active":""} key={item}>{item}</span>)}
         </aside>
         <div className="dashMain">
-          <div className="dashHead"><div><h4>Good morning, Emmanuel 👋</h4><small>Here’s your career progress this week.</small></div><span>search jobs, companies...</span></div>
+          <div className="dashHead"><div><h4>Good morning, Dr. O 👋</h4><small>Here’s your career progress this week.</small></div><span>search jobs, companies...</span></div>
           <div className="metrics">
             <article><small>Applications</small><strong>12</strong><em>↑ 33% week</em></article>
             <article><small>Interviews</small><strong>4</strong><em>↑ 2 this week</em></article>
@@ -141,7 +141,7 @@ export default function Home() {
 
       <footer className="terminalFooter">
         <span>&gt; OpenMaps and Odesseus -- two products, one portfolio.</span>
-        <span>Built by Emmanuel Opara. <i aria-hidden="true" /></span>
+        <span>Built by Dr. O. <i aria-hidden="true" /></span>
       </footer>
     </main>
   );
