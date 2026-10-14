@@ -3,6 +3,7 @@ import type { ReactNode } from "react";
 export const navItems = [
   ["Products", "/#products"],
   ["About", "/about"],
+  ["Dr. O", "/dr-o"],
 ] as const;
 
 export function SiteHeader() {
@@ -12,6 +13,7 @@ export function SiteHeader() {
       <nav aria-label="Primary navigation">
         <a href="/#products">[ products ]</a>
         <a href="/about">[ about ]</a>
+        <a href="/dr-o">[ dr. o ]</a>
         <a className="exploreCmd" href="/#products">[ explore -&gt; ]</a>
       </nav>
     </header>
@@ -21,7 +23,7 @@ export function SiteHeader() {
 export function SiteFooter() {
   return (
     <footer className="terminalFooter">
-      <span>&gt; Parent company + product portfolio // current: OpenMaps, Odesseus.</span>
+      <span>&gt; OpenMaps + Odesseus // built and shipped by Dr. O.</span>
       <span>Built by Dr. O. <i aria-hidden="true" /></span>
     </footer>
   );
