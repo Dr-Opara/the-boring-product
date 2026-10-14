@@ -17,10 +17,6 @@ export default function EnterGateway() {
     <div className={`enterGateway${entering ? " isEntering" : ""}`}>
       {!entering ? (
         <>
-          <div className="enterHint" aria-hidden="true">
-            <span>for boring products</span>
-            <b>──────▶</b>
-          </div>
           <button className="enterButton" onClick={() => setEntering(true)}>
             <span className="enterKey">ENTER</span>
             <span className="enterCommand">./explore</span>
